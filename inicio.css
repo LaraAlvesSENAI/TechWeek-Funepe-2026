@@ -1,0 +1,170 @@
+.hero {
+  max-width: 1250px;
+  min-height: 700px;
+  margin: auto;
+  padding: 80px 25px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+.tag {
+  color: #b39381;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(55px, 8vw, 95px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  font-weight: 900;
+}
+.hero h1 span {
+  color: #b39381;
+}
+.subtitulo {
+  margin-top: 25px;
+  color: #c5bab3;
+  font-size: 21px;
+}
+.informacoes-evento {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.informacoes-evento div {
+  min-width: 160px;
+  padding: 18px;
+  background: #33261b;
+  border: 1px solid #473627;
+  border-radius: 8px;
+}
+.informacoes-evento strong {
+  display: block;
+  font-size: 14px;
+}
+.informacoes-evento span {
+  display: block;
+  margin-top: 4px;
+  color: #c5bab3;
+  font-size: 13px;
+}
+.botao {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 15px 25px;
+  background: #b39381;
+  color: #ffffff;
+  border: 2px solid #473627;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.botao:hover {
+  background: transparent;
+  color: #b39381;
+}
+.hero-imagem {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1b0107, #220008);
+  border: 1px solid #473627;
+  position: relative;
+  overflow: hidden;
+}
+.hero-imagem::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  /* background: #b39381; */
+  opacity: 0.07;
+  border-radius: 50%;
+  filter: blur(30px);
+}
+@media (max-width: 900px) {
+  .menu {
+    gap: 12px;
+  }
+  .menu a {
+    font-size: 12px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-imagem {
+    min-height: 300px;
+  }
+  .sobre {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .localizacao-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    padding: 18px 15px;
+    gap: 15px;
+  }
+  .menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero {
+    padding-top: 60px;
+  }
+  .hero h1 {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+  .informacoes-evento {
+    flex-direction: column;
+  }
+  .informacoes-evento div {
+    width: 100%;
+  }
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  /*1 card por linha no celular*/
+  .cards-palestrantes {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    max-width: 400px;
+    margin: auto;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  form .botao {
+    width: 100%;
+    text-align: center;
+  }
+  .logos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  .foto-futura {
+    height: 180px;
+  }
+}
